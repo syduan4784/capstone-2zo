@@ -20,12 +20,12 @@ jobs:
 
       - name: Copy files to EC2
         run: |
-          scp -o StrictHostKeyChecking=no -r ./* ubuntu@<your-ec2-public-ip>:/home/ubuntu/my-app/
+          scp -o StrictHostKeyChecking=no -r ./* ubuntu@52.78.154.108:/home/ubuntu/my-app/
 
       - name: Install dependencies
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@<your-ec2-public-ip> 'cd /home/ubuntu/my-app && npm install'
+          ssh -o StrictHostKeyChecking=no ubuntu@52.78.154.108 'cd /home/ubuntu/my-app && npm install'
 
       - name: Start application
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@<your-ec2-public-ip> 'cd /home/ubuntu/my-app && npm start'
+          ssh -o StrictHostKeyChecking=no ubuntu@52.78.154.108 'cd /home/ubuntu/my-app && npm start'
