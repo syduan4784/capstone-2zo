@@ -1,31 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Main from './pages/Main';
+import Calendar from './pages/Calendar';
+import TextSearch from './pages/TextSearch';
 
 function App() {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const response = await axios.get('http://52.78.154.108:3000/api/users'); // EC2 IP로 변경
-        setUsers(response.data);
-      } catch (error) {
-        console.error('Error fetching users:', error);
-      }
-    };
-
-    fetchUsers();
-  }, []);
-
   return (
-    <div>
-      <h1>User List</h1>
-      <ul>
-        {users.map(user => (
-          <li key={user.id}>{user.name}</li>
-        ))}
-      </ul>
-    </div>
+    <Router>
+      <Routes>
+        {/* 메인 페이지 */}
+        <Route path="/" element={<Main />} />
+        {/* 캘린더 페이지 */}
+        <Route path="/calendar" element={<Calendar />} />
+        {/* 텍스트 검색 페이지 */}
+        <Route path="/search" element={<TextSearch />} />
+      </Routes>
+    </Router>
   );
 }
 
