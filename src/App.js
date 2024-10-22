@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     // 서버 API에 데이터 요청
-    axios.get('http://[52.78.154.108]:[3000]/api/data')
+    axios.get('http://52.78.154.108:3000/api/data')
       .then(response => {
         setData(response.data); // 서버에서 받은 데이터를 상태에 저장
       })
