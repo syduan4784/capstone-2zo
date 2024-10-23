@@ -2,11 +2,14 @@ const express = require('express');
 const cors = require('cors');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const path = require('path'); // 추가된 부분
 =======
 >>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
 =======
 >>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
+=======
+>>>>>>> parent of ca30baf (UI 초안)
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -15,15 +18,19 @@ app.use(express.json());
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // API 엔드포인트
 =======
 >>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
 =======
 >>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
+=======
+>>>>>>> parent of ca30baf (UI 초안)
 app.get('/api', (req, res) => {
   res.json({ message: 'Hello from the Express backend!' });
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // 정적 파일 제공
@@ -39,6 +46,8 @@ app.get('*', (req, res) => {
 >>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
 =======
 >>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
+=======
+>>>>>>> parent of ca30baf (UI 초안)
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

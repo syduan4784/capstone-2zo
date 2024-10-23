@@ -8,12 +8,16 @@
     "@testing-library/user-event": "^13.5.0",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "axios": "^1.7.7",
 >>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
 =======
     "axios": "^1.7.7",
 >>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
+=======
+    "axios": "^1.7.7",
+>>>>>>> parent of ca30baf (UI 초안)
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
