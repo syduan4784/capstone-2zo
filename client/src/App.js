@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import logo from './logo.svg';
 import './App.css';
 
@@ -20,6 +21,8 @@ function App() {
         </a>
       </header>
 =======
+=======
+>>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -40,13 +43,20 @@ function App() {
   return (
     <div>
       <h1>{message}</h1>
+<<<<<<< HEAD
+>>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
+=======
 >>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
     </div>
   );
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
 =======
 export default App;
 >>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)

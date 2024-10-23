@@ -7,6 +7,10 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    "axios": "^1.7.7",
+>>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
 =======
     "axios": "^1.7.7",
 >>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)

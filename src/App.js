@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // App.js
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -25,6 +26,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function App() {
+=======
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+function App() {
+>>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -38,6 +45,9 @@ function App() {
     };
 
     fetchUsers();
+<<<<<<< HEAD
+>>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
+=======
 >>>>>>> parent of eee1b1e (Merge pull request #3 from C7266/main)
   }, []);
 
