@@ -1,4 +1,3 @@
-// src/pages/Login.js
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../css/Login.styled.css';
@@ -11,6 +10,11 @@ function Login() {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
+    if (!userId || !userPassword) {
+      setErrorMessage('아이디와 비밀번호를 입력해주세요.');
+      return;
+    }
+
     try {
       const response = await axios.post('/api/login', {
         user_id: userId,
@@ -19,7 +23,7 @@ function Login() {
 
       if (response.data.success) {
         alert(response.data.message); // 로그인 성공 메시지
-        navigate('/'); // 홈 페이지로 이동
+        navigate('/main'); // 홈 페이지로 이동
       } else {
         setErrorMessage(response.data.message); // 로그인 실패 메시지 설정
       }
