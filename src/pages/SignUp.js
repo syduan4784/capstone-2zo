@@ -36,16 +36,16 @@ function SignUp() {
       setErrorMessage('비밀번호가 일치하지 않습니다.');
       return;
     }
-
+  
     try {
       const response = await axios.post('/api/signup', {
         user_id: userId,
         user_password: userPassword,
-        user_age: userAge,
+        user_age: parseInt(userAge), // 나이를 int 형식으로 변환
         user_disease: userDiseases,
         user_gender: userGender,
       });
-
+  
       if (response.data.success) {
         alert(response.data.message);
         navigate('/login');
@@ -55,7 +55,7 @@ function SignUp() {
     } catch (error) {
       setErrorMessage('서버와의 통신에 문제가 발생했습니다.');
     }
-  };
+  };  
 
   return (
     <div className="signup-container">
