@@ -29,6 +29,7 @@ const CalendarPage = ({ goBack }) => {
     }
   }, []);
 
+  // 로컬 스토리지에서 알림 목록 불러오기
   useEffect(() => {
     const savedReminders = localStorage.getItem('medicationReminders');
     if (savedReminders) {
@@ -39,6 +40,7 @@ const CalendarPage = ({ goBack }) => {
     }
   }, []);
 
+  // 알림 목록을 로컬 스토리지에 저장
   useEffect(() => {
     localStorage.setItem('medicationReminders', JSON.stringify(reminders));
   }, [reminders]);
@@ -99,14 +101,14 @@ const CalendarPage = ({ goBack }) => {
     const currentTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     const currentDay = now.getDay();
   
-    setReminders(prevReminders =>
+    setReminders(prevReminders => 
       prevReminders.map(reminder => {
         const reminderDate = new Date(reminder.date);
         const isSameDate = reminderDate.getDate() === now.getDate() &&
                            reminderDate.getMonth() === now.getMonth() &&
                            reminderDate.getFullYear() === now.getFullYear();
   
-        // 알림이 아직 울리지 않았고, 조건이 맞을 때만 알림을 발송
+        // 알림이 아직 울리지 않았고, 조건에 부합할 때만 알림 발송
         if (!reminder.notified && (isSameDate || reminder.days.includes(currentDay)) && reminder.time <= currentTime) {
           showNotification("약 복용 시간", `${reminder.medication} 복용 시간입니다!`);
           return { ...reminder, notified: true }; // 알림 발송 여부를 true로 설정
