@@ -30,7 +30,7 @@ const useCamera = () => {
     canvas.getContext('2d').drawImage(video, 0, 0);
     setImage(canvas.toDataURL('image/png'));
     
-    // ©¢?m b?o khai bao bi?n imgData ©¢ung cach
+   
     const imgData = canvas.toDataURL('image/png'); 
   
     console.log('Captured Image:', imgData); 
