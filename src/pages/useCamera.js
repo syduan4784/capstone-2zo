@@ -31,12 +31,9 @@ const useCamera = () => {
     setImage(canvas.toDataURL('image/png'));
     
    
-    const imgData = canvas.toDataURL('image/png'); 
+    const imgData = canvas.toDataURL('image/png');    console.log('Captured Image:', imgData); 
   
-    console.log('Captured Image:', imgData); 
-  
-    setImage(imgData); 
-  };
+    setImage(imgData);  };
 
   return { cameraStream, image, captureImage };
 };
